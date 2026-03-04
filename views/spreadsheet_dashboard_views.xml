@@ -19,4 +19,27 @@
         </field>
     </record>
 
+    <!-- Add Query Builder button to List view -->
+    <record id="view_spreadsheet_dashboard_list_inherit_query_builder" model="ir.ui.view">
+        <field name="name">spreadsheet.dashboard.list.inherit.query.builder</field>
+        <field name="model">spreadsheet.dashboard</field>
+        <field name="inherit_id" ref="spreadsheet_dashboard.spreadsheet_dashboard_view_list"/>
+        <field name="arch" type="xml">
+            <xpath expr="//list" position="inside">
+                <button name="%(action_spreadsheet_query_builder)d" 
+                        string="Assistant Requête" 
+                        type="action" 
+                        icon="fa-magic"
+                        context="{'default_dashboard_id': active_id}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Direct Menu Item for Query Builder -->
+    <menuitem id="menu_spreadsheet_query_builder_wizard"
+              name="Assistant Requête"
+              parent="spreadsheet_dashboard.spreadsheet_dashboard_menu_configuration"
+              action="action_spreadsheet_query_builder"
+              sequence="30"/>
+
 </odoo>
