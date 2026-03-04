@@ -13,7 +13,7 @@
                             string="Assistant Requête" 
                             type="action" 
                             class="oe_highlight" 
-                            context="{'default_dashboard_id': active_id}"/>
+                            context="{'default_dashboard_id': id}"/>
                 </header>
             </xpath>
         </field>
