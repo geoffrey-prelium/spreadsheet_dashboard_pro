@@ -35,11 +35,11 @@
         </field>
     </record>
 
-    <!-- Direct Menu Item for Query Builder -->
-    <menuitem id="menu_spreadsheet_query_builder_wizard"
+    <!-- Top Level Menu Item for Query Builder to ensure visibility -->
+    <menuitem id="menu_spreadsheet_query_builder_wizard_root"
               name="Assistant Requête"
-              parent="spreadsheet_dashboard.spreadsheet_dashboard_menu_configuration"
               action="action_spreadsheet_query_builder"
-              sequence="30"/>
+              web_icon="spreadsheet_dashboard_pro,static/description/icon.png"
+              sequence="100"/>
 
 </odoo>
