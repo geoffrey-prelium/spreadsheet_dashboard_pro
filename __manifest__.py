@@ -10,7 +10,7 @@
     'author': "Geoffrey Prelium",
     'website': "https://github.com/geoffrey-prelium",
     'category': 'Productivity/Documents',
-    'version': '1.0',
+    'version': '1.0.1',
     'depends': ['base', 'spreadsheet_dashboard', 'documents', 'spreadsheet'],
     'data': [
         'security/ir.model.access.csv',
