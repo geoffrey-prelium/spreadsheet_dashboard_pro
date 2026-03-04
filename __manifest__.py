@@ -11,7 +11,7 @@
     'website': "https://github.com/geoffrey-prelium",
     'category': 'Productivity/Documents',
     'version': '1.0',
-    'depends': ['base', 'spreadsheet_dashboard'],
+    'depends': ['base', 'spreadsheet_dashboard', 'documents', 'spreadsheet'],
     'data': [
         'security/ir.model.access.csv',
         'wizard/spreadsheet_query_builder_views.xml',
