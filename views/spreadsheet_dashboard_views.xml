@@ -7,12 +7,14 @@
         <field name="model">spreadsheet.dashboard</field>
         <field name="inherit_id" ref="spreadsheet_dashboard.spreadsheet_dashboard_view_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//header" position="inside">
-                <button name="%(action_spreadsheet_query_builder)d" 
-                        string="Assistant Requête" 
-                        type="action" 
-                        class="oe_highlight" 
-                        context="{'default_dashboard_id': active_id}"/>
+            <xpath expr="//form" position="inside">
+                <header>
+                    <button name="%(action_spreadsheet_query_builder)d" 
+                            string="Assistant Requête" 
+                            type="action" 
+                            class="oe_highlight" 
+                            context="{'default_dashboard_id': active_id}"/>
+                </header>
             </xpath>
         </field>
     </record>
