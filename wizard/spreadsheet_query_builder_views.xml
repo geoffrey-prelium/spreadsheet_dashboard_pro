@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Query Builder Wizard View -->
+    <record id="view_spreadsheet_query_builder_form" model="ir.ui.view">
+        <field name="name">spreadsheet.query.builder.form</field>
+        <field name="model">spreadsheet.query.builder</field>
+        <field name="arch" type="xml">
+            <form string="Spreadsheet Query Builder">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="model_id" options="{'no_create': True}"/>
+                        </group>
+                        <group>
+                            <field name="dashboard_id"/>
+                            <field name="limit"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Champs à inclure">
+                            <field name="field_ids" widget="many2many_tags" options="{'no_create': True}"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <footer>
+                    <button name="action_generate_query" string="Générer et Insérer" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action Action for Query Builder -->
+    <record id="action_spreadsheet_query_builder" model="ir.actions.act_window">
+        <field name="name">Générateur de Requêtes Spreadsheet</field>
+        <field name="res_model">spreadsheet.query.builder</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>
